@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SEA Games 34 Malaysia 2027</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#/home" aria-label="SEA Games 34 home">
+          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+          <span>
+            <strong>SEA Games 34</strong>
+            <small>Malaysia 2027</small>
+          </span>
+        </a>
+
+        <nav class="main-nav" aria-label="Primary navigation">
+          <a href="#/home" data-nav="home">Home</a>
+          <div class="nav-menu">
+            <button id="aboutMenuButton" type="button" data-nav="about">About SEA Games 2027</button>
+            <div id="aboutMenu" class="nav-dropdown" hidden>
+              <a href="#/about/venues">Competition venues</a>
+              <a href="#/about/sports">Sports</a>
+              <a href="#/about/athletes">Athletes</a>
+              <a href="#/about/information">Information</a>
+              <a href="#/about/committee">Organizing Committee</a>
+              <a href="#/about/sponsorship">Sponsorship</a>
+              <a href="#/about/faq">FAQ</a>
+            </div>
+          </div>
+          <a href="#/tickets" data-nav="tickets">Tickets</a>
+          <a href="#/contact" data-nav="contact">Contact us</a>
+        </nav>
+
+        <div class="utility-bar">
+          <label class="search-box">
+            <span aria-hidden="true">&#8981;</span>
+            <input id="globalSearch" type="search" autocomplete="off" placeholder="Search events, sports, athletes" />
+          </label>
+
+          <div class="language-menu">
+            <button id="languageButton" class="icon-button" type="button" aria-label="Change language" title="Change language">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.4 2.6 3.6 5.6 3.6 9S14.4 18.4 12 21M12 3C9.6 5.6 8.4 8.6 8.4 12s1.2 6.4 3.6 9"></path></svg>
+            </button>
+            <div id="languageOptions" class="utility-dropdown" hidden>
+              <button type="button" data-lang="en">English</button>
+              <button type="button" data-lang="vi">Tieng Viet</button>
+              <button type="button" data-lang="ms">Bahasa Melayu</button>
+              <button type="button" data-lang="th">Thai</button>
+            </div>
+          </div>
+
+          <select id="currencySelect" aria-label="Currency">
+            <option>MYR</option>
+            <option>VND</option>
+            <option>USD</option>
+            <option>SGD</option>
+            <option>THB</option>
+            <option>IDR</option>
+            <option>PHP</option>
+          </select>
+
+          <div id="authSlot"></div>
+          <button id="themeToggle" class="icon-button" type="button" title="Toggle theme" aria-label="Toggle theme">&#9680;</button>
+        </div>
+      </header>
+
+      <main id="app" tabindex="-1"></main>
+
+      <footer class="site-footer">
+        <div class="footer-brand">
+          <span class="brand-mark footer-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+          <div>
+            <strong>SEA Games 34 Malaysia 2027</strong>
+            <p>SEA Games 34 Organizing Office, Kuala Lumpur Sports City, Malaysia</p>
+            <p>hello@seagames34.my &middot; +60 3 2027 3434</p>
+          </div>
+        </div>
+        <div class="footer-socials" aria-label="Social links">
+          <a class="social-icon instagram" href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram"><img src="https://cdn.simpleicons.org/instagram/ffffff" alt="" loading="lazy"></a>
+          <a class="social-icon tiktok" href="https://www.tiktok.com/" target="_blank" rel="noreferrer" aria-label="TikTok"><img src="https://cdn.simpleicons.org/tiktok/ffffff" alt="" loading="lazy"></a>
+          <a class="social-icon youtube" href="https://www.youtube.com/" target="_blank" rel="noreferrer" aria-label="YouTube"><img src="https://cdn.simpleicons.org/youtube/ffffff" alt="" loading="lazy"></a>
+          <a class="social-icon facebook" href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook"><img src="https://cdn.simpleicons.org/facebook/ffffff" alt="" loading="lazy"></a>
+          <a class="social-icon x" href="https://x.com/" target="_blank" rel="noreferrer" aria-label="X"><img src="https://cdn.simpleicons.org/x/111827" alt="" loading="lazy"></a>
+        </div>
+      </footer>
+    </div>
+
+    <aside id="floatingChat" class="floating-chat" hidden>
+      <div class="floating-chat-head">
+        <strong>Event assistant</strong>
+        <button class="icon-button compact-icon" type="button" data-action="toggle-chat" aria-label="Close assistant">&times;</button>
+      </div>
+      <div id="globalChatLog" class="chat-log"><div class="bot">Ask about SEA Games 34 events, venues, sports, tickets or athletes.</div></div>
+      <form id="globalChatForm" class="chat-form">
+        <input id="globalChatInput" type="search" placeholder="Ask a question" />
+        <button class="primary-action compact" type="submit">Ask</button>
+      </form>
+    </aside>
+    <button id="chatLauncher" class="chat-launcher" type="button" data-action="toggle-chat" aria-label="Open event assistant">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6.8C4 5.25 5.25 4 6.8 4h10.4C18.75 4 20 5.25 20 6.8v6.4c0 1.55-1.25 2.8-2.8 2.8h-4.7L8 20v-4H6.8C5.25 16 4 14.75 4 13.2V6.8Z"></path><path d="M8 9h8M8 12h5"></path></svg>
+    </button>
+
+    <div id="toast" class="toast" hidden></div>
+    <script src="/app.js"></script>
+  </body>
+</html>
