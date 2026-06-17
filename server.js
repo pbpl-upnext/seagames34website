@@ -172,7 +172,10 @@ function sendJson(res, data, status = 200) {
   const body = JSON.stringify(data, null, 2);
   res.writeHead(status, {
     "content-type": "application/json; charset=utf-8",
-    "cache-control": "no-store"
+    "cache-control": "no-store",
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+    "Access-Control-Allow-Headers": "Content-Type"
   });
   res.end(body);
 }
