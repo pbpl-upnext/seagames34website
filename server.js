@@ -5,7 +5,7 @@ const crypto = require("crypto");
 
 const PORT = process.env.PORT || 4173;
 const ROOT = __dirname;
-const PUBLIC_DIR = path.join(ROOT, "public");
+const PUBLIC_DIR = fs.existsSync(path.join(ROOT, "public", "index.html")) ? path.join(ROOT, "public") : ROOT;
 
 const sportSeed = [
   ["air-sports", "Air Sports", "Sarawak", "aerial"], ["aquatic-sports", "Aquatic Sports", "Sarawak", "water"], ["archery", "Archery", "Sarawak", "precision"],
