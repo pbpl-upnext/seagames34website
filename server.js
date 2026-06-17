@@ -362,5 +362,6 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(PORT, () => {
+  console.log("HELLO LINH CORS TEST");
   console.log(`SEA Games 34 portal running at http://localhost:${PORT}`);
 });
