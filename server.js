@@ -220,6 +220,7 @@ function searchAll(query) {
 function handleApi(req, res, url) {
   if (req.method === "GET" && url.pathname === "/api/overview") {
     return sendJson(res, {
+      TEST_CORS: "HELLO_RENDER",
       edition: "SEA Games 34",
       host: "Malaysia",
       dates: { start: "2027-09-18", end: "2027-09-29" },
