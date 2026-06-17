@@ -390,7 +390,7 @@ function newsViewCount(newsId, baseCount = 0) {
   localStorage.setItem(key, String(current));
   return new Intl.NumberFormat().format(current);
 }
-
+const API_BASE = "https://name-seagames34-backend.onrender.com";
 function api(path) {
   return fetch(path).then(response => {
     if (!response.ok) throw new Error(`API error: ${path}`);
